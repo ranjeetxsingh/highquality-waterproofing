@@ -46,7 +46,7 @@ export default function BeforeAfter() {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-primary-400 font-semibold tracking-wide uppercase text-sm mb-2">See The Difference</h2>
+          <h2 className="text-gray-400 font-semibold tracking-wide uppercase text-sm mb-2">See The Difference</h2>
           <h3 className="text-3xl md:text-5xl font-bold text-white mb-6 font-heading">Transformations That Last</h3>
           <p className="text-lg text-gray-400">
             Slide to see the incredible difference our premium waterproofing membranes make. From leaky, degraded roofs to fully sealed, weather-resistant defenses.

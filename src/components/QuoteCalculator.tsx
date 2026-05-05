@@ -40,7 +40,7 @@ export default function QuoteCalculator() {
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight font-heading">
               Get an Automated <br/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-primary-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 via-primary-400 to-primary-600">
                 Project Quote
               </span>
             </h2>
