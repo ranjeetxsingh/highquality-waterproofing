@@ -38,7 +38,11 @@ export default function Gallery() {
     <section id="projects" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-primary-600 font-semibold tracking-wide uppercase text-sm mb-2">Our Work</h2>
+          <h2 className="text-primary-600 font-bold tracking-wider uppercase text-lg md:text-xl lg:text-2xl mb-4 flex items-center justify-center gap-3">
+            <span className="w-10 md:w-16 h-[2px] bg-primary-600"></span>
+            Our Work
+            <span className="w-10 md:w-16 h-[2px] bg-primary-600"></span>
+          </h2>
           <h3 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Recent Projects</h3>
           <p className="text-lg text-gray-600">
             A small selection of the high-quality waterproofing and leak repair jobs we've recently completed across Auckland.

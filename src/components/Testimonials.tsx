@@ -22,59 +22,94 @@ const testimonials = [
   }
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+    }
+  }
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30, scale: 0.95 },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    scale: 1,
+    transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] }
+  }
+};
+
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="py-24 bg-gray-900 text-white relative overflow-hidden">
+    <section id="testimonials" className="py-32 bg-gray-950 text-white relative overflow-hidden">
       {/* Decorative background element */}
-      <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-primary-600/20 rounded-full blur-[100px] pointer-events-none"></div>
-      <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-primary-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary-600/10 rounded-full blur-[120px] pointer-events-none translate-x-1/3 -translate-y-1/3"></div>
+      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#FF8C00]/5 rounded-full blur-[120px] pointer-events-none -translate-x-1/3 translate-y-1/3"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-primary-400 font-semibold tracking-wide uppercase text-sm mb-2">Testimonials</h2>
-          <h3 className="text-3xl md:text-5xl font-bold mb-6">Satisfied Clients</h3>
-          <p className="text-lg text-gray-400">
-            Don't just take our word for it. Review what Auckland homeowners and businesses have to say about our waterproofing services.
-          </p>
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-primary-500 font-bold tracking-wider uppercase text-lg md:text-xl lg:text-2xl mb-4 flex items-center justify-center gap-3">
+              <span className="w-10 md:w-16 h-[2px] bg-primary-500/50"></span>
+              Testimonials
+              <span className="w-10 md:w-16 h-[2px] bg-primary-500/50"></span>
+            </h2>
+            <h3 className="text-4xl md:text-5xl font-bold mb-6 font-heading tracking-tight text-white">Satisfied Clients</h3>
+            <p className="text-lg text-gray-400 max-w-2xl mx-auto font-light">
+              Don't just take our word for it. Review what Auckland homeowners and businesses have to say about our waterproofing services.
+            </p>
+          </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+        >
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ delay: index * 0.15, duration: 0.7, ease: "easeOut" }}
+              variants={cardVariants}
               whileHover={{ y: -10, scale: 1.02 }}
-              className="bg-gray-800/80 backdrop-blur-md border border-gray-700/50 hover:border-primary-500/30 rounded-3xl p-8 relative shadow-xl hover:shadow-2xl hover:shadow-primary-600/10 transition-all duration-300 group"
+              className="bg-gray-900/50 backdrop-blur-xl border border-white/5 hover:border-primary-500/30 rounded-[2rem] p-10 relative shadow-xl hover:shadow-2xl hover:shadow-primary-600/10 transition-all duration-500 group flex flex-col"
             >
-              <Quote className="absolute top-6 right-6 w-12 h-12 text-gray-700/50 group-hover:text-primary-500/20 transition-colors duration-300 flex-shrink-0" />
+              <Quote className="absolute top-8 right-8 w-16 h-16 text-white/5 group-hover:text-primary-500/10 transition-colors duration-500 flex-shrink-0" />
               
-              <div className="flex gap-1 mb-6">
+              <div className="flex gap-1.5 mb-8">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <motion.div
                     key={i}
-                    initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 0.3 + (index * 0.1) + (i * 0.1), type: "spring" }}
+                    initial={{ opacity: 0, scale: 0, rotate: -180 }}
+                    whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.4 + (index * 0.1) + (i * 0.1), type: "spring", stiffness: 200, damping: 15 }}
                   >
-                    <Star className="w-5 h-5 fill-accent-400 text-accent-400 drop-shadow-md" />
+                    <Star className="w-5 h-5 fill-[#FF8C00] text-[#FF8C00] drop-shadow-[0_2px_10px_rgba(255,140,0,0.3)]" />
                   </motion.div>
                 ))}
               </div>
               
-              <p className="text-gray-300 leading-relaxed mb-8 relative z-10 font-medium group-hover:text-white transition-colors duration-300">
+              <p className="text-gray-300 leading-relaxed mb-8 relative z-10 font-light text-lg group-hover:text-white transition-colors duration-500 flex-grow">
                 "{testimonial.text}"
               </p>
               
-              <div className="border-t border-gray-700/50 pt-6 mt-auto">
-                <h5 className="font-bold text-lg text-white font-heading">{testimonial.name}</h5>
-                <span className="text-sm text-primary-400 font-medium">{testimonial.location}</span>
+              <div className="border-t border-white/10 pt-6 mt-auto">
+                <h5 className="font-bold text-xl text-white font-heading tracking-tight mb-1">{testimonial.name}</h5>
+                <span className="text-sm text-primary-400 font-medium tracking-wide uppercase">{testimonial.location}</span>
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

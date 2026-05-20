@@ -9,15 +9,25 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           
           <div className="lg:col-span-1">
-            <a href="#home" className="flex items-center gap-2 mb-6">
-              <div className="bg-primary-600 p-2 rounded-xl shadow-none">
-                <Droplets className="text-white w-5 h-5" />
+            <a href="#home" className="flex items-center gap-2.5 mb-6 group">
+              <div className="relative flex items-center justify-center shrink-0">
+                <svg width="32" height="40" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg" className="group-hover:scale-105 transition-transform">
+                  <path d="M20 0C20 0 4 18 4 28C4 36.8366 11.1634 44 20 44C28.8366 44 36 36.8366 36 28C36 18 20 0 20 0Z" fill="url(#footer-drop-gradient)"/>
+                  <ellipse cx="20" cy="45" rx="18" ry="2.5" stroke="#00A2EE" strokeWidth="1.5" fill="none" />
+                  <ellipse cx="20" cy="49" rx="12" ry="1.5" stroke="#0055A4" strokeWidth="1.5" fill="none" />
+                  <defs>
+                    <linearGradient id="footer-drop-gradient" x1="20" y1="0" x2="20" y2="44" gradientUnits="userSpaceOnUse">
+                      <stop stopColor="#00A2EE" />
+                      <stop offset="1" stopColor="#004494" />
+                    </linearGradient>
+                  </defs>
+                </svg>
               </div>
-              <div className="flex flex-col ml-1">
-                <span className="font-heading font-bold text-lg leading-none text-white tracking-tight">
+              <div className="flex flex-col justify-center">
+                <span className="font-sans font-black text-xl leading-[0.85] text-[#FF8C00] tracking-tight uppercase" style={{ WebkitTextStroke: '0.5px #FF8C00' }}>
                   High Quality
                 </span>
-                <span className="text-white font-semibold text-xs leading-none tracking-[0.2em] uppercase mt-0.5">
+                <span className="font-serif font-black text-[18px] leading-[0.9] text-white tracking-widest uppercase mt-1">
                   Waterproofing
                 </span>
               </div>

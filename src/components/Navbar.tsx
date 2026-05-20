@@ -32,36 +32,46 @@ export default function Navbar() {
             : 'bg-transparent border border-transparent'
         }`}
       >
-        <a href="#home" className="flex items-center gap-2 group">
-          <div className="bg-primary-600 p-2 rounded-xl group-hover:bg-primary-500 transition">
-            <Droplets className="text-white w-6 h-6" />
+        <a href="#home" className="flex items-center gap-1.5 lg:gap-2 group px-1 lg:px-2 py-1 shrink-0">
+          <div className="relative flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-[16px] h-[20px] lg:w-[20px] lg:h-[25px] group-hover:scale-105 transition-transform">
+              <path d="M20 0C20 0 4 18 4 28C4 36.8366 11.1634 44 20 44C28.8366 44 36 36.8366 36 28C36 18 20 0 20 0Z" fill="url(#drop-gradient)"/>
+              <ellipse cx="20" cy="45" rx="18" ry="2.5" stroke="#00A2EE" strokeWidth="1.5" fill="none" />
+              <ellipse cx="20" cy="49" rx="12" ry="1.5" stroke="#0055A4" strokeWidth="1.5" fill="none" />
+              <defs>
+                <linearGradient id="drop-gradient" x1="20" y1="0" x2="20" y2="44" gradientUnits="userSpaceOnUse">
+                  <stop stopColor="#00A2EE" />
+                  <stop offset="1" stopColor="#004494" />
+                </linearGradient>
+              </defs>
+            </svg>
           </div>
-          <div className="flex flex-col ml-1">
-            <span className="font-heading font-bold text-xl leading-none text-white tracking-tight">
+          <div className="flex flex-col justify-center">
+            <span className="font-sans font-black text-[12px] lg:text-[15px] leading-[0.85] text-[#FF8C00] tracking-tight uppercase" style={{ WebkitTextStroke: '0.3px #FF8C00' }}>
               High Quality
             </span>
-            <span className="text-white font-semibold text-[11px] leading-tight tracking-[0.2em] uppercase mt-0.5 opacity-100">
+            <span className="font-serif font-black text-[10px] lg:text-[13px] leading-[0.9] text-white tracking-widest uppercase mt-0.5 lg:mt-1">
               Waterproofing
             </span>
           </div>
         </a>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-3 lg:gap-6 xl:gap-8">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="text-gray-300 hover:text-white text-sm font-semibold tracking-wide transition-colors"
+              className="text-gray-300 hover:text-white text-[11px] lg:text-sm font-semibold tracking-wide transition-colors whitespace-nowrap"
             >
               {link.name}
             </a>
           ))}
           <a
             href="tel:0212266765"
-            className="flex items-center gap-2 bg-primary-600 hover:bg-primary-500 text-white px-5 py-2.5 rounded-full text-sm font-bold transition-all shadow-[0_4px_14px_rgba(37,99,235,0.3)] hover:shadow-[0_6px_20px_rgba(37,99,235,0.4)] hover:-translate-y-0.5 ml-2"
+            className="flex items-center gap-1.5 lg:gap-2 bg-primary-600 hover:bg-primary-500 text-white px-3 py-1.5 lg:px-5 lg:py-2.5 rounded-full text-[11px] lg:text-sm font-bold transition-all shadow-[0_4px_14px_rgba(37,99,235,0.3)] hover:shadow-[0_6px_20px_rgba(37,99,235,0.4)] hover:-translate-y-0.5 ml-1 lg:ml-2 whitespace-nowrap shrink-0"
           >
-            <Phone className="w-4 h-4" />
+            <Phone className="w-3 h-3 lg:w-4 lg:h-4" />
             021 226 6765
           </a>
         </nav>
