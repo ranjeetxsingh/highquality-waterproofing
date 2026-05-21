@@ -116,7 +116,7 @@ export default function Hero() {
             >
               <a
                 href="#quote"
-                className="group w-full sm:w-auto relative inline-flex items-center justify-center gap-3 bg-primary-600 hover:bg-primary-500 text-white px-8 py-4 xl:py-5 rounded-2xl font-bold transition-all shadow-[0_10px_40px_rgba(37,99,235,0.4)] hover:shadow-[0_15px_60px_rgba(37,99,235,0.5)] hover:-translate-y-1 overflow-hidden"
+                className="group w-full sm:w-auto relative inline-flex items-center justify-center gap-3 bg-primary-600 hover:bg-primary-500 text-white px-8 py-4 xl:py-5 rounded-2xl font-bold transition-all shadow-[0_10px_40px_rgba(255,140,0,0.4)] hover:shadow-[0_15px_60px_rgba(255,140,0,0.5)] hover:-translate-y-1 overflow-hidden"
               >
                 <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[150%] skew-x-[-20deg] group-hover:animate-shine z-0"></div>
                 <span className="relative z-10">Get Instant Quote</span>

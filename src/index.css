@@ -5,12 +5,14 @@
   --font-sans: "Rubik", ui-sans-serif, system-ui, sans-serif;
   --font-heading: "Rubik", ui-sans-serif, system-ui, sans-serif;
   
-  --color-primary-50: #f0f7ff;
-  --color-primary-100: #e0efff;
-  --color-primary-500: #0070f3;
-  --color-primary-600: #0055d4;
-  --color-primary-700: #0044b0;
-  --color-primary-900: #002266;
+  --color-primary-50: #fff7ed;
+  --color-primary-100: #ffedd5;
+  --color-primary-200: #fed7aa;
+  --color-primary-400: #fb923c;
+  --color-primary-500: #ff9800;
+  --color-primary-600: #ff8c00;
+  --color-primary-700: #ea580c;
+  --color-primary-900: #7c2d12;
 
   --color-accent-400: #ff6b00;
   --color-accent-500: #ff5500;
@@ -35,7 +37,7 @@ html {
   border-radius: 6px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #2563eb;
+  background: #ff8c00;
 }
 
 @keyframes shine {

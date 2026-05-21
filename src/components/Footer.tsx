@@ -13,12 +13,12 @@ export default function Footer() {
               <div className="relative flex items-center justify-center shrink-0">
                 <svg width="32" height="40" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg" className="group-hover:scale-105 transition-transform">
                   <path d="M20 0C20 0 4 18 4 28C4 36.8366 11.1634 44 20 44C28.8366 44 36 36.8366 36 28C36 18 20 0 20 0Z" fill="url(#footer-drop-gradient)"/>
-                  <ellipse cx="20" cy="45" rx="18" ry="2.5" stroke="#00A2EE" strokeWidth="1.5" fill="none" />
-                  <ellipse cx="20" cy="49" rx="12" ry="1.5" stroke="#0055A4" strokeWidth="1.5" fill="none" />
+                  <ellipse cx="20" cy="45" rx="18" ry="2.5" stroke="#FFA400" strokeWidth="1.5" fill="none" />
+                  <ellipse cx="20" cy="49" rx="12" ry="1.5" stroke="#E65100" strokeWidth="1.5" fill="none" />
                   <defs>
                     <linearGradient id="footer-drop-gradient" x1="20" y1="0" x2="20" y2="44" gradientUnits="userSpaceOnUse">
-                      <stop stopColor="#00A2EE" />
-                      <stop offset="1" stopColor="#004494" />
+                      <stop stopColor="#FFA400" />
+                      <stop offset="1" stopColor="#E65100" />
                     </linearGradient>
                   </defs>
                 </svg>

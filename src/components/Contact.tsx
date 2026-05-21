@@ -113,8 +113,8 @@ export default function Contact() {
                   <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-400 group-focus-within/input:text-primary-500 transition-colors">
                     <Wrench className="h-5 w-5" />
                   </div>
-                  <select id="service" className="w-full pl-11 pr-12 py-3.5 rounded-2xl bg-gray-50 border border-gray-200 text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 focus:bg-white transition-all appearance-none cursor-pointer shadow-sm">
-                    <option value="" disabled selected className="text-gray-400">Select a service...</option>
+                  <select id="service" defaultValue="" className="w-full pl-11 pr-12 py-3.5 rounded-2xl bg-gray-50 border border-gray-200 text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 focus:bg-white transition-all appearance-none cursor-pointer shadow-sm">
+                    <option value="" disabled className="text-gray-400">Select a service...</option>
                     <option>Membrane Maintenance & Repairs</option>
                     <option>Roof / Deck Waterproofing</option>
                     <option>Basement Leak Repair</option>
@@ -137,7 +137,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              <button type="submit" className="w-full py-4 px-8 mt-2 bg-primary-600 hover:bg-primary-500 text-white rounded-2xl font-bold transition-all shadow-[0_4px_14px_rgba(37,99,235,0.2)] hover:shadow-[0_6px_20px_rgba(37,99,235,0.4)] hover:-translate-y-0.5 flex items-center justify-center gap-2 group/btn">
+              <button type="submit" className="w-full py-4 px-8 mt-2 bg-primary-600 hover:bg-primary-500 text-white rounded-2xl font-bold transition-all shadow-[0_4px_14px_rgba(255,140,0,0.2)] hover:shadow-[0_6px_20px_rgba(255,140,0,0.4)] hover:-translate-y-0.5 flex items-center justify-center gap-2 group/btn">
                 <span>Send Message & Get Quote</span>
                 <Send className="w-4 h-4 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
               </button>

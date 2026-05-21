@@ -36,12 +36,12 @@ export default function Navbar() {
           <div className="relative flex items-center justify-center shrink-0">
             <svg viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-[16px] h-[20px] lg:w-[20px] lg:h-[25px] group-hover:scale-105 transition-transform">
               <path d="M20 0C20 0 4 18 4 28C4 36.8366 11.1634 44 20 44C28.8366 44 36 36.8366 36 28C36 18 20 0 20 0Z" fill="url(#drop-gradient)"/>
-              <ellipse cx="20" cy="45" rx="18" ry="2.5" stroke="#00A2EE" strokeWidth="1.5" fill="none" />
-              <ellipse cx="20" cy="49" rx="12" ry="1.5" stroke="#0055A4" strokeWidth="1.5" fill="none" />
+              <ellipse cx="20" cy="45" rx="18" ry="2.5" stroke="#FFA400" strokeWidth="1.5" fill="none" />
+              <ellipse cx="20" cy="49" rx="12" ry="1.5" stroke="#E65100" strokeWidth="1.5" fill="none" />
               <defs>
                 <linearGradient id="drop-gradient" x1="20" y1="0" x2="20" y2="44" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#00A2EE" />
-                  <stop offset="1" stopColor="#004494" />
+                  <stop stopColor="#FFA400" />
+                  <stop offset="1" stopColor="#E65100" />
                 </linearGradient>
               </defs>
             </svg>
@@ -69,7 +69,7 @@ export default function Navbar() {
           ))}
           <a
             href="tel:0212266765"
-            className="flex items-center gap-1.5 lg:gap-2 bg-primary-600 hover:bg-primary-500 text-white px-3 py-1.5 lg:px-5 lg:py-2.5 rounded-full text-[11px] lg:text-sm font-bold transition-all shadow-[0_4px_14px_rgba(37,99,235,0.3)] hover:shadow-[0_6px_20px_rgba(37,99,235,0.4)] hover:-translate-y-0.5 ml-1 lg:ml-2 whitespace-nowrap shrink-0"
+            className="flex items-center gap-1.5 lg:gap-2 bg-primary-600 hover:bg-primary-500 text-white px-3 py-1.5 lg:px-5 lg:py-2.5 rounded-full text-[11px] lg:text-sm font-bold transition-all shadow-[0_4px_14px_rgba(255,140,0,0.3)] hover:shadow-[0_6px_20px_rgba(255,140,0,0.4)] hover:-translate-y-0.5 ml-1 lg:ml-2 whitespace-nowrap shrink-0"
           >
             <Phone className="w-3 h-3 lg:w-4 lg:h-4" />
             021 226 6765

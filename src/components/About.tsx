@@ -97,7 +97,7 @@ export default function About() {
               viewport={{ once: true }}
               transition={{ delay: 0.8 }}
               href="#contact"
-              className="inline-flex items-center justify-center bg-gray-900 hover:bg-primary-600 text-white px-8 py-4 rounded-2xl font-bold tracking-wide transition-all shadow-[0_4px_20px_rgba(0,0,0,0.1)] hover:shadow-[0_8px_30px_rgba(37,99,235,0.3)] hover:-translate-y-1"
+              className="inline-flex items-center justify-center bg-gray-900 hover:bg-primary-600 text-white px-8 py-4 rounded-2xl font-bold tracking-wide transition-all shadow-[0_4px_20px_rgba(0,0,0,0.1)] hover:shadow-[0_8px_30px_rgba(255,140,0,0.3)] hover:-translate-y-1"
             >
               Discuss Your Project
             </motion.a>
